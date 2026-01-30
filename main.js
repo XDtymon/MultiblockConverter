@@ -11,31 +11,43 @@ const mods = [
     
 ]
 
-for (let i = 0; i < main_menu.length; i++) {
-    console.log(main_menu[i])
+function clear() {
+    console.clear()
 }
-var inputMainMenuChoice = prompt("Choice | ")
-switch (inputMainMenuChocie) {
-    case 1:
-        for (let i = 0; i < mods.length; i++) {
-            console.log(mods[i])
+
+function printList (list) {
+    clear()
+    if (list.length != null) {
+        for (let i = 0; i < list.length; i++) {
+            console.log(list[i])   
         }
-        var inputMainMenuChoice = prompt("Choice | ")
-        switch (inputMainMenuChoice) {
-            case 1: 
-                var inputCMChoice = prompt("Input |")
-            case 2:
-                console.log("!!! Warning !!!")
-                console.log("Input .aisle`s and .with, without .start() nor .build()")
-                console.log("")
-                var inputGTChoice = prompt("Input |")
-            deafult:
-                console.log("Choice Error, enter 1 or 2!")
-        }
-    case 2:
-        console.log("WIP")
-    deafult:
-        console.log("Choice Error, enter 1 or 2!")
+    }
+}
+
+
+
+
+printList(main_menu)
+let inputMainMenuChoice = prompt("Choice | ")
+if (inputMainMenuChoice == 1) {
+    
+    printList(mods)
+    inputMainMenuChoice = prompt("Choice | ")
+    if (inputMainMenuChoice == 1) {
+        
+        let inputCMChoice = prompt("Input |")
+    } else if (inputMainMenuChoice == 2) {
+        
+        console.log("!!! Warning !!!")
+        console.log("Input .aisle`s and .with, without .start() nor .build()")
+        console.log("")
+        
+        let inputGTChoice = prompt("Input |")
+    } else {
+        console.error("Choice Error, enter 1 or 2!")
+    }
         
     
+} else {
+    console.error("Choice Error, enter 1 or 2!")
 }
