@@ -24,7 +24,53 @@ function printList (list) {
     }
 }
 
+function encodeGT(keys, multiblock_code) {
+    new_keys = []
+    new_multiblock_code = []
+    size = []
+    
+    for (int a = 0; a < multiblock_code.length; a++) {
+        
+    }
 
+
+}
+
+function decodeGT(keys, multiblock_code) {
+    new_keys = []
+    new_multiblock_code = []
+    size = []
+    
+    for (int a = 0; a < multiblock_code.length; a++) {
+        
+    }
+
+
+}
+
+function decodeCM(input) {
+    key = []
+    multiblock = []
+    size = []
+    
+    if (input != null) {
+        for (int a = 0; a < multiblock.length; a++) {
+            for (int b = 0; b < multiblock[a].length; b++) {
+                
+            }
+        }
+
+        
+    } else {
+        return "Error during decoding"
+    }
+
+
+
+
+
+    return [key, multiblock]
+}
 
 
 printList(main_menu)
