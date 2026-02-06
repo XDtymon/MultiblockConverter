@@ -10,9 +10,13 @@ const main_menu = [
 const mods = [
     "To universal from",
     "1 - Custom Machinery",
-    "2 - GT"
-    
+    "2 - GT",
+    "To universal to",
+    "3 - Custom Machinery",
+    "4 - GT"
 ]
+
+
 
 function clear() {
     console.clear()
@@ -32,7 +36,7 @@ function encodeGT(keys, multiblock_code) {
     new_multiblock_code = []
     size = []
     
-    for (int a = 0; a < multiblock_code.length; a++) {
+    for (let a = 0; a < multiblock_code.length; a++) {
         
     }
 
@@ -44,7 +48,7 @@ function decodeGT(keys, multiblock_code) {
     new_multiblock_code = []
     size = []
     
-    for (int a = 0; a < multiblock_code.length; a++) {
+    for (let a = 0; a < multiblock_code.length; a++) {
         
     }
 
@@ -52,16 +56,19 @@ function decodeGT(keys, multiblock_code) {
 }
 
 function decodeCM(input) {
-    key = []
-    multiblock = []
-    size = []
+    let newInput = new Object({input})
+    let key = newInput.input.keys
+    let multiblock = []
+    let size = []
     
     if (input != null) {
-        for (int a = 0; a < multiblock.length; a++) {
-            for (int b = 0; b < multiblock[a].length; b++) {
-                
+        console.log(newInput)    
+        console.log(key)
+        /*for (let a = 0; a < multiblock.length; a++) {
+            for (let b = 0; b < multiblock[a].length; b++) {
+                console.log(b)
             }
-        }
+        }*/
 
         
     } else {
@@ -84,7 +91,8 @@ if (inputMainMenuChoice == 1) {
     inputMainMenuChoice = prompt("Choice | ")
     if (inputMainMenuChoice == 1) {
         
-        let inputCMChoice = prompt("Input |")
+        let inputCM = prompt("Input |")
+        decodeCM(inputCM)
     } else if (inputMainMenuChoice == 2) {
         
         console.log("!!! Warning !!!")
@@ -95,8 +103,8 @@ if (inputMainMenuChoice == 1) {
     } else {
         console.error("Choice Error, enter 1 or 2!")
     }
-        
-    
+} else if (inputMainMenuChoice == 2) {
+
 } else {
     console.error("Choice Error, enter 1 or 2!")
 }
