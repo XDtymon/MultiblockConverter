@@ -1,3 +1,6 @@
+//{"keys":{"a":"gtceu:bronze_brick_casing","b":"gtceu:steam_machine_casing"},"pattern":[["aaa       ","a a       ","aaa       ","a a       ","aaa       ","         a"],["bbb       ","b b       ","b b       ","b b       ","bmb       ","          "]]}
+
+
 const main_menu = [
     "Menu",
     "1 - Converter",
